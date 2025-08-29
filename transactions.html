@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تراکنش‌های کیف پول | پلتفرم جامع رهگیری ارزهای دیجیتال</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="transactions.css">
+</head>
+<body>
+    <div class="container transactions-container">
+        <header class="dashboard-header">
+            <div class="logo-container">
+                <img src="assets/fata-logo.png" alt="لوگوی پلیس فتا" class="fata-logo-small">
+            </div>
+            <h1>پلتفرم جامع رهگیری ارزهای دیجیتال</h1>
+            <div class="user-controls">
+                <button id="backBtn" class="btn back-btn">بازگشت</button>
+                <button id="logoutBtn" class="btn logout-btn">خروج</button>
+            </div>
+        </header>
+        
+        <div class="wallet-info">
+            <h2>اطلاعات کیف پول</h2>
+            <div class="wallet-details">
+                <p><strong>آدرس کیف پول:</strong> <span id="displayWalletAddress"></span></p>
+                <p><strong>بلاکچین:</strong> <span id="displayBlockchain"></span></p>
+                <p><strong>موجودی:</strong> <span id="walletBalance"></span></p>
+            </div>
+        </div>
+        
+        <div class="transactions-section">
+            <h2>تراکنش‌های کیف پول</h2>
+            <div class="transactions-filter">
+                <label for="txFilter">فیلتر:</label>
+                <select id="txFilter">
+                    <option value="all">همه تراکنش‌ها</option>
+                    <option value="incoming">تراکنش‌های ورودی</option>
+                    <option value="outgoing">تراکنش‌های خروجی</option>
+                </select>
+            </div>
+            
+            <div class="transactions-list" id="transactionsList">
+                <div class="loading-spinner" id="loadingSpinner">
+                    <div class="spinner"></div>
+                    <p>در حال بارگذاری تراکنش‌ها...</p>
+                </div>
+                <table id="transactionsTable" class="transactions-table">
+                    <thead>
+                        <tr>
+                            <th>شناسه تراکنش</th>
+                            <th>تاریخ</th>
+                            <th>نوع</th>
+                            <th>آدرس مبدا</th>
+                            <th>آدرس مقصد</th>
+                            <th>مقدار</th>
+                            <th>کارمزد</th>
+                            <th>وضعیت</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transactionsTableBody">
+                        <!-- داده‌های تراکنش‌ها اینجا قرار می‌گیرند -->
+                    </tbody>
+                </table>
+                <div id="noTransactions" class="no-transactions hidden">
+                    <p>هیچ تراکنشی یافت نشد.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/auth-check.js"></script>
+    <script src="js/crypto-api.js"></script>
+    <script src="js/transactions.js"></script>
+</body>
+</html>
