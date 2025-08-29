@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود آدرس کیف پول | پلتفرم جامع رهگیری ارزهای دیجیتال</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container wallet-container">
+        <header class="dashboard-header">
+            <div class="logo-container">
+                <img src="assets/fata-logo.png" alt="لوگوی پلیس فتا" class="fata-logo-small">
+            </div>
+            <h1>پلتفرم جامع رهگیری ارزهای دیجیتال</h1>
+            <div class="user-controls">
+                <button id="logoutBtn" class="btn logout-btn">خروج</button>
+            </div>
+        </header>
+        
+        <div class="wallet-form">
+            <h2>ورود آدرس کیف پول</h2>
+            <form id="walletForm">
+                <div class="form-group">
+                    <label for="walletAddress">آدرس کیف پول:</label>
+                    <input type="text" id="walletAddress" name="walletAddress" 
+                           placeholder="آدرس کیف پول را وارد کنید" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="blockchain">انتخاب بلاکچین:</label>
+                    <select id="blockchain" name="blockchain" required>
+                        <option value="">انتخاب کنید</option>
+                        <option value="bitcoin">بیت کوین (Bitcoin)</option>
+                        <option value="ethereum">اتریوم (Ethereum)</option>
+                        <option value="litecoin">لایت کوین (Litecoin)</option>
+                        <option value="dogecoin">دوج کوین (Dogecoin)</option>
+                        <option value="tron">ترون (Tron)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn primary-btn">جستجوی تراکنش‌ها</button>
+                </div>
+            </form>
+            <div id="error-message" class="error-message"></div>
+        </div>
+    </div>
+    <script src="js/auth-check.js"></script>
+    <script src="js/wallet-input.js"></script>
+</body>
+</html>
