@@ -1,0 +1,133 @@
+/* استایل‌های مخصوص صفحه تراکنش‌ها */
+
+.wallet-info {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.wallet-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.wallet-details p {
+    margin: 0;
+}
+
+.transactions-section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.transactions-filter {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.transactions-filter label {
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+.transactions-filter select {
+    width: auto;
+    min-width: 200px;
+}
+
+.transactions-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.transactions-table th,
+.transactions-table td {
+    padding: 12px 15px;
+    text-align: right;
+    border-bottom: 1px solid #ddd;
+}
+
+.transactions-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.transactions-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.transaction-type {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.transaction-incoming {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.transaction-outgoing {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.transaction-status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.status-confirmed {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-failed {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.no-transactions {
+    text-align: center;
+    padding: 30px;
+    color: #6c757d;
+}
+
+/* برای آدرس‌های طولانی */
+.address-cell {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.address-cell:hover {
+    overflow: visible;
+    white-space: normal;
+    word-break: break-all;
+    background-color: #f8f9fa;
+    position: relative;
+    z-index: 1;
+}
+
+/* پاسخگویی */
+@media (max-width: 992px) {
+    .transactions-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
